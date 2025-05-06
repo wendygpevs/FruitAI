@@ -13,9 +13,9 @@
 </head>
 <body>
 
-  <div class="header">
-    Fruit AI <i class="fas fa-apple-alt"></i>
-  </div>
+    <div class="header">
+      Fruit AI <i class="fas fa-apple-alt"></i>
+      </div>
 
 <div class="container mt-4">
   <div class="row align-items-center">
