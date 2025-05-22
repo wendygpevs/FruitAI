@@ -10,20 +10,20 @@ html, body {
 
 /* Header */
 .header {
-  background-color: #558b2f; /* Un verde más oscuro y elegante */
+  background-color: #558b2f;
   color: #fff;
-  font-size: 2.5rem; /* Tamaño de fuente ligeramente reducido */
-  font-family: 'Georgia', Times, serif; /* Fuente serif clásica para el encabezado */
+  font-size: 2.5rem;
+  font-family: 'Georgia', Times, serif;
   text-align: center;
-  padding: 25px 0; /* Aumento del padding vertical */
-  animation: fadeIn 0.8s ease-out; /* Animación ligeramente más rápida */
+  padding: 25px 0;
+  animation: fadeIn 0.8s ease-out;
 }
 
-/* Animación de fadeIn modificada para un efecto de "deslizamiento suave" */
+/* Animación de entrada */
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-30px); /* Deslizamiento más corto */
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
@@ -31,31 +31,48 @@ html, body {
   }
 }
 
-/* Aplica la animación a los elementos que la usan */
 .header, .upload-box, .btn-analyze, .result-box {
   animation: fadeIn 0.8s ease-out;
 }
 
-/* Información izquierda */
+/* Contenedor principal de los tres bloques */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* Columnas */
+.col-md-4 {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Texto informativo */
 .info-text {
   font-style: italic;
   margin-top: 20px;
   text-align: justify;
-  line-height: 1.7; /* Espaciado entre líneas un poco mayor */
-  color: #555; /* Texto gris oscuro */
+  line-height: 1.7;
+  color: #555;
 }
 
 /* Título de resultados */
 h4 {
   color: #fff;
-  font-size: 1.8rem; /* Tamaño de fuente del título de resultados */
+  font-size: 1.8rem;
   margin-bottom: 15px;
 }
 
 /* Cuadro de subida */
 .upload-box {
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   margin: auto;
   border: 2px dashed #ccc;
   padding: 10px;
@@ -65,59 +82,60 @@ h4 {
   justify-content: center;
 }
 
-
+/* Drop area */
 #drop-area p {
   margin-top: 10px;
   color: #777;
 }
 
-/* Botón de análisis */
+/* Botón analizar */
 .btn-analyze {
-  background-color: #558b2f; /* Verde más oscuro */
+  background-color: #558b2f;
   border: none;
-  border-radius: 5px; /* Bordes menos redondeados */
-  padding: 12px 25px; /* Ajuste del padding */
-  font-size: 1.1rem; /* Tamaño de fuente ligeramente menor */
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
   color: #fff;
   margin-top: 15px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  animation-delay: 0.5s; /* Retraso de animación ligeramente menor */
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  animation-delay: 0.5s;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn-analyze:hover {
-  background-color: #33691e; /* Tono de verde más oscuro al pasar el ratón */
-  transform: scale(1.02); /* Escala más sutil al pasar el ratón */
+  background-color: #33691e;
+  transform: scale(1.02);
 }
 
-/* Cuadro de resultados*/
+/* Cuadro de resultados */
 .result-box {
-  background-color: #e8f5e9; /* Un verde muy claro como fondo */
-  padding: 25px; /* Aumento del padding */
-  border-radius: 10px; /* Bordes menos redondeados */
+  background-color: #e8f5e9;
+  padding: 25px;
+  border-radius: 10px;
   text-align: center;
-  color: #33691e; /* Texto verde oscuro */
-  border: 1px solid #a5d6a7; /* Borde verde claro */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil */
-  animation-delay: 0.3s; /* Retraso de animación ligeramente menor */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente sans-serif */
-  margin: 30px auto;  /* ✅ Centrado horizontal */
-  max-width: 600px;   /* ✅ Evita que se estire demasiado */
+  color: #33691e;
+  border: 1px solid #a5d6a7;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.08);
+  animation-delay: 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
 }
-
 
 .result-box h4 {
-  font-size: 2rem; /* Título más grande */
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #33691e; /* Texto verde oscuro */
+  color: #33691e;
 }
 
 .result-box img#resultImg {
-  max-height: 100px; /* Tamaño de imagen ajustado */
+  max-height: 100px;
   margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid #a5d6a7;
+  margin: 0 auto;
+  display: block;
 }
 
 .result-box p {
@@ -134,46 +152,37 @@ h4 {
 .result-box span#fruitName {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #2e7d32; /* Tono de verde más intenso para el nombre */
+  color: #2e7d32;
 }
 
 .result-box span#confidence {
-  color: #f9a825; /* Un tono dorado para la probabilidad */
+  color: #f9a825;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
 /* Footer */
 .footer {
-  background-color: #558b2f; /* Verde más oscuro */
+  background-color: #558b2f;
   color: #fff;
   text-align: center;
-  padding: 15px; /* Ajuste del padding */
-  font-size: 0.9rem; /* Tamaño de fuente ligeramente menor */
-  margin-top: 40px; /* Aumento del margen superior */
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
 
-.row.align-items-center {
-  display: flex;
-  flex-wrap: wrap; /* Asegura que las columnas se envuelvan en pantallas más pequeñas */
-  align-items: flex-start; /* Cambiamos a flex-start para que se alineen desde la parte superior */
-}
-
-.col-md-4 {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Asegura que las columnas se dispongan en horizontal en pantallas medianas y grandes */
-@media (min-width: 768px) {
-  .row.align-items-center {
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: flex-start; 
+/* Responsive */
+@media (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
   }
 
   .col-md-4 {
-    width: 33.333333%; 
-    flex: 0 0 auto; 
+    max-width: 100%;
   }
+}
+
+.container-mt-4 {
+  flex: 1;
 }

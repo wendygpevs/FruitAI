@@ -52,7 +52,7 @@
 
   </div>
 </div>
-
+<br><br><br><br>
   <div class="footer">&copy; Ingeniería de Software</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.14.0/dist/tf.min.js"></script>
@@ -80,20 +80,15 @@
       "orange": "naranja",
       "strawberry": "fresa",
       "lemon": "limón",
-      "lime": "lima",
       "peach": "durazno",
       "pear": "pera",
-      "pomegranate": "granada",
-      "granny smith": "manzana verde",
-      "fig": "higo",
       "raspberry": "frambuesa",
       "mango": "mango",
       "cucumber": "pepino",
       "grape": "uva",
       "watermelon": "sandía",
       "cantaloupe": "melón",
-      "plum": "ciruela",
-      "passion fruit": "maracuyá"
+      "plum": "ciruela"
     };
 
     // Evento para resaltar el área de carga al arrastrar una imagen sobre ella
